@@ -1,0 +1,76 @@
+footer {
+	font-size: 18px;
+}
+
+nav {
+	text-align: center;
+	background-color: #D33047;}
+
+section {
+	text-align: center;}
+
+i { 
+   padding: 9px;
+	font-size: 90px;}
+
+header {
+	text-align: center;
+}
+
+h4, h3 {
+   text-align: center;
+
+}
+
+img {
+  font-size: 40px;
+}
+
+.btn {
+	margin: 30px;
+	padding: 15px;
+	align-content: center;
+}
+
+.card-title {
+	font-size: 25px;
+	color: 
+ 
+}
+
+.text-success {
+	font-size: 20px;}
+
+
+.text-danger {
+	font-size: 48px;
+}
+
+.text-muted {
+	font-size: 18px;
+}
+
+
+@media screen and (min-width: 768px){
+      a.btn {
+	width: 70%;
+	margin: 20px 0px;
+     }
+}
+
+@media (min-width: 576px) {
+     a.btn {
+	width: 50%;
+	margin: 20px 0px;
+     }
+
+}
+
+
+@media only screen and (max-width: 768px) and (min-width: 200px)  {
+    
+    img.foto {
+    	width: 150px;}
+	}
+    
+    
