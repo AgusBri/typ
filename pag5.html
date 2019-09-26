@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Topografía y Proyectos</title>
+  <meta charset="utf-8">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+	<link href="/your-path-to-fontawesome/css/fontawesome.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<script src="https://kit.fontawesome.com/9bd4ff5291.js"></script>
+	  <link href="/your-path-to-fontawesome/css/brands.css" rel="stylesheet">
+  <link href="/your-path-to-fontawesome/css/solid.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+  <!---CONTACTO--->
+<!---navbar--->
+<nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"><img class="img-fluid" src="img/logo1.png"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+        <span class="navbar-toggler-icon" ></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Inicio</a>            
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="pag3.html">¿Quiénes somos?</a>            
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="pag4.html">Trabajos</a>            
+          </li>
+
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Contacto</a>            
+          </li>
+
+        </ul>
+      </div>
+  </div>
+</nav>
+<!---end of navbar--->
+<!---email php form--->
+<?php
+
+if (isset($_POST['submit'])) {
+$name = $_POST['name'];
+$subject = $_POST['subject'];
+$mailFrom = $_POST['mail'];
+$message = $_POST['message'];
+
+$mailTo = "agusbri@hotmail.com.ar";
+$headers = "From: ".$mailFrom;
+$txt = "Has recibido un mail de: ".$name.".\n\n".$message;
+
+mail($mailTo, $subject, $txt, $headers);
+header("Location: index.php?mailsend");
+}
+?>
+<!---email responsive--->
+<section>
+<div class="container contact-form">
+  <h1>Contáctanos</h1>
+  <hr>
+  <div class="row">
+ 
+   <form action="conctactform.php" method="post">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputName1">Nombre</label>
+    <input type="name" class="form-control" id="exampleInputPassword1" placeholder="Introduzca su nombre">
+  </div>
+
+  <div class="form-group">
+    <label for="exampleInputEmail1">Correo electrónico</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Introduzca su correo electrónico">
+    <small id="emailHelp" class="form-text">Nunca compartiremos su mail con nadie.</small>
+    <br>
+
+  <div class="form-group">
+    <label for="exampleInputSubject1">Asunto</label>
+    <input type="subject" class="form-control" id="exampleInputSubject1" aria-describedby="emailHelp" placeholder="Introduzca su asunto">
+  </div>
+
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1">Mensaje</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+  </div>
+
+  <button type="submit" name="submit" class="btn btn-primary">Enviar</button>
+</form>
+</section>
+
+
+<!---bottom logo--->
+<div class="card border-light mb-3">
+  <div class="card-body">
+  <img src="img/logo3.png"></a>
+  <br>
+    <h5 class="card-title" class="text-center padding"> ¡Contáctenos!</h5>
+    <p class="card-text" class="text-center padding"> ejemplode@mail.com </p>
+  </div>
+<!---end of bottom logo--->
+
+ <div class="card text-white bg-secondary text-center">
+<footer class="card-body">Copyright © 2019 - Desarrollado por Agustina Brizuela</footer>
+</div>
+
+
+</body>
+</html>
